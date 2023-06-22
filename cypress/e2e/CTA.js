@@ -14,4 +14,6 @@ export class cta {
     clickOnCTAButton() {
         cy.get('.MainCta__plus___1JlXa').click();
     }
+
+    /// note ido
 }
