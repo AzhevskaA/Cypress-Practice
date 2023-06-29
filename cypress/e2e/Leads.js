@@ -26,8 +26,8 @@ export class LeadsPage {
   }
 
   fillInDefualtValue(clientName, phoneNumber) {
-    this.fillInPhone(clientName);
-    this.fillInClinet(phoneNumber);
+    this.fillInPhone(phoneNumber);
+    this.fillInClinet(clientName);
     this.clickCreate();
   }
 }

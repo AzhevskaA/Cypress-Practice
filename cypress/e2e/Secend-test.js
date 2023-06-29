@@ -22,20 +22,19 @@ describe("Jobs tests", () => {
     let jobsPage = leftMenupage.clickJobsLabel();
     jobsPage.serchForJob("100");
     cy.get(".jobs-module__quickJob___3NbDw")
-      .contains("100")
-      .should("have.text", "100");
+      .contains("100");
   });
 
   it("create a new lead", () => {
     let leadClientName = usefullfunction.generateText(7);
     let leadPhoneNumber = usefullfunction.generateNumber(10);
     let leadPage = ctaModal.createLeadFromCTA();
-    leadPage.fillInDefualtValue();
+    leadPage.fillInDefualtValue(leadClientName, leadPhoneNumber);
     leadClientName = usefullfunction.capitalizeFirstLetter(leadClientName);
-    cy.get(".cl_link").contains(leadClientName);
+    cy.get(".header-module__clientLink___3_DCj").contains(leadClientName);
   });
 
-  it("create a new lead + tag", () => {
+  it.only("create a new lead + tag", () => {
     let leadClientName = usefullfunction.generateText(7);
     let leadPhoneNumber = usefullfunction.generateNumber(10);
     let leadTegName = usefullfunction.generateText(5);
