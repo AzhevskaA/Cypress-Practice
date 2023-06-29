@@ -26,4 +26,9 @@ export class usefullfunctions {
      capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
+
+    clearCookies(){
+        cy.clearCookie("sajFranchise");
+        cy.clearCookie("read_only_user");
+    }
 }
